@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Slot Booking</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-body">
+    <main class="auth-wrap">
+        <section class="auth-card">
+            <h1>Login</h1>
+            <p>Sign in to continue to Slot Booking System.</p>
+            <form id="loginForm" class="form">
+                <label for="loginEmail">Email</label>
+                <input id="loginEmail" type="email" required placeholder="you@example.com">
+
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" type="password" required placeholder="Enter password">
+
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p id="loginMessage" class="message"></p>
+            <p class="auth-switch">Not a user? <a href="/register.html">Create account</a></p>
+        </section>
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+</html>

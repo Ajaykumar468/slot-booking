@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Slot</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container nav-wrap">
+            <a class="brand" href="/">
+                <span class="dot"></span>
+                Slot Booking System
+            </a>
+            <nav class="nav-links">
+                <a href="/slots.html">Slots</a>
+                <a href="/booked.html">My Bookings</a>
+                <a class="btn btn-danger btn-small" id="logoutBtn" href="#">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-section">
+        <div class="page-title-row">
+            <div>
+                <h1>Book a Slot</h1>
+                <p>Your account details are used automatically.</p>
+            </div>
+        </div>
+
+        <section class="form-card">
+            <div class="user-chip">Booking as <strong id="bookingUserName">-</strong> (<span id="bookingUserEmail">-</span>)</div>
+            <form id="bookingForm" class="form">
+                <label for="slot">Select Slot</label>
+                <select id="slot" required></select>
+                <button type="submit" class="btn">Book Slot</button>
+            </form>
+            <p id="bookingMessage" class="message"></p>
+        </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

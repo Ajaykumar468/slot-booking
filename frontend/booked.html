@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container nav-wrap">
+            <a class="brand" href="/">
+                <span class="dot"></span>
+                Slot Booking System
+            </a>
+            <nav class="nav-links">
+                <a href="/slots.html">Slots</a>
+                <a class="active" href="/booked.html">My Bookings</a>
+                <a class="btn btn-danger btn-small" id="logoutBtn" href="#">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-section">
+        <div class="page-title-row">
+            <div>
+                <h1>My Bookings</h1>
+                <p>All confirmed bookings are listed below.</p>
+            </div>
+        </div>
+
+        <section id="bookingsList" class="booking-grid"></section>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

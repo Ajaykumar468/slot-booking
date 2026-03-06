@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Booking System</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container nav-wrap">
+            <a class="brand" href="/">
+                <span class="dot"></span>
+                Slot Booking System
+            </a>
+            <nav class="nav-links">
+                <a href="/slots.html">Slots</a>
+                <a href="/booked.html">My Bookings</a>
+                <a class="btn btn-danger btn-small" id="logoutBtn" href="#">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-home">
+        <section class="hero-card">
+            <h1>Welcome, <span id="currentUserName">User</span></h1>
+            <p>Book your ideal slot in a single step.</p>
+            <div class="hero-actions">
+                <a class="btn" href="/slots.html">Open Slots</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

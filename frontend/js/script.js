@@ -68,10 +68,33 @@ function setupLogout() {
 
 async function fetchJson(url, options = {}) {
     const response = await fetch(url, options);
-    const data = await response.json();
-    if (!response.ok) {
-        throw new Error(data.error || data.detail || "Something went wrong");
+    const raw = await response.text();
+    let data = null;
+
+    if (raw) {
+        try {
+            data = JSON.parse(raw);
+        } catch {
+            data = null;
+        }
     }
+
+    if (!response.ok) {
+        const fallbackMessage =
+            raw && data === null
+                ? "API returned a non-JSON response. Check backend deployment and /api redirect."
+                : "Something went wrong";
+        throw new Error(
+            (data && (data.error || data.detail || data.message)) || fallbackMessage
+        );
+    }
+
+    if (data === null) {
+        throw new Error(
+            "API returned an empty response. Check backend deployment and /api redirect."
+        );
+    }
+
     return data;
 }
 
